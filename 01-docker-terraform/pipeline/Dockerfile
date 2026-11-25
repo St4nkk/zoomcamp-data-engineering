@@ -12,4 +12,6 @@ RUN uv sync --locked --no-install-project
 
 COPY ingest_data.py .
 
-ENTRYPOINT ["python", "ingest_data.py"]
+ENTRYPOINT ["python"]
+
+CMD ["ingest_data.py"]
