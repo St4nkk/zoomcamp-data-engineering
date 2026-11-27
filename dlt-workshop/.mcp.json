@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "dlt-workspace-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "dlthub",
+        "ai",
+        "mcp",
+        "--stdio"
+      ]
+    },
+    "dlt": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--with",
+        "dlt[duckdb]",
+        "--with",
+        "dlt-mcp[search]",
+        "python",
+        "-m",
+        "dlt_mcp"
+      ],
+      "tools": [
+        "*"
+      ]
+    }
+  }
+}
